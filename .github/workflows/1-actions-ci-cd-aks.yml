@@ -41,9 +41,6 @@ jobs:
         vuln-type: 'os,library'
         severity: 'MEDIUM,HIGH,CRITICAL'
 
-    - name: Login to Docker Hub
-      run: |
-        echo "${{ secrets.DOCKER_REPOSITORY_PASSWORD }}" | docker login -u $DOCKER_REPOSITORY --password-stdin
   
     - name: Push Image to Docker Hub
       run:
